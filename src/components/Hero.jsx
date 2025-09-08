@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import DiscadaCard from "./DiscadaCard";
 import TuetanoCard from "./TuetanoCard";
+import {Link} from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -112,7 +113,9 @@ function Hero() {
           <div className="test">
             <h2 className="welcome">¡Solo lo mejor de México!</h2>
             <p id="texto">La mejor carne de res, cerdo y pollo, ¡directo a tu mesa!</p>
-            <button className="butn">Ver Productos</button>
+            <Link to="/productos" className="butn mt-5 text-decoration-none">
+              Productos
+            </Link>
           </div>
         </div>
       </section>

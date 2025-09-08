@@ -112,7 +112,10 @@ img { display: block; max-width: 100%; }
   margin-top: 1rem; padding: .7rem 1.2rem; border: 0; border-radius: .75rem;
   background: var(--green); color: #fff; font-weight: 700; cursor: pointer;
   transition: transform .2s ease, filter .2s ease;
+
 }
+
+
 .butn:hover { transform: translateY(-1px) scale(1.02); filter: brightness(1.05); }
 
 /* --- HAMBURGER --- */
