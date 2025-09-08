@@ -1,0 +1,77 @@
+/* --- OVERLAY --- */
+
+html{
+  scroll-behavior: smooth;
+}
+
+.custom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* --- VENTANA --- */
+.custom-window {
+  background: #fff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  width: min(85vw, 280px);
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  animation: popUp 0.25s ease-out;
+  text-align: left;
+}
+
+/* --- TÍTULO --- */
+.custom-window h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #222;
+  text-align: center;
+}
+
+/* --- LISTA --- */
+.custom-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.custom-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.3;
+    list-style: circle;
+}
+
+/* --- BOTÓN --- */
+.custom-close-btn {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes popUp {
+  from { transform: scale(0.9); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
+}
+
+.card-body{
+  background-color: #cac5c5;
+}
