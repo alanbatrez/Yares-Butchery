@@ -9,6 +9,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import DiscadaCard from "./DiscadaCard";
 import TuetanoCard from "./TuetanoCard";
 import {Link} from "react-router-dom";
+import SirloinCard from "./SirloinCard";
+import PapaCard from "./PapaCard.jsx";
+import MapLocation from "./MapLocation.jsx";
+
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -148,44 +152,23 @@ function Hero() {
                 <TuetanoCard/>
 
                 {/* 5 */}
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <img src="/combo5.jpg" className="card-img-top" alt="Combo 5" width="100%" height="225" />
-                    <div className="card-body">
-                      <p className="card-text">Combo 5: pollo adobado + verduras para asar.</p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button type="button" className="btn btn-sm btn-outline-secondary">Ver</button>
-                          
-                        </div>
-                        <small className="text-body-secondary">7 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <SirloinCard/>
 
                 {/* 6 */}
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <img src="/combo6.jpg" className="card-img-top" alt="Combo 6" width="100%" height="225" />
-                    <div className="card-body">
-                      <p className="card-text">Combo 6: parrillada completa para compartir.</p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button type="button" className="btn btn-sm btn-outline-secondary">Ver</button>
-                          
-                        </div>
-                        <small className="text-body-secondary">5 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <PapaCard />
 
               </div>{/* row */}
             </div>{/* container */}
+
           </div>{/* album */}
+          <p className="lead m-5"> Recuerda en Yare's Mexican Butchery no solo encontraras la mejor carne estilo mexicana
+          si no tambien, una gran variedad de productos mexicanos como salsas, tortillas, dulces tipicos, etc.</p>
         </div>{/* container principal */}
+
       </section>
+
+
+      <MapLocation/>
     </>
   );
 }

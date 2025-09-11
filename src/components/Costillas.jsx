@@ -25,7 +25,7 @@ function Costillas() {
                                 className="btn btn-sm btn-outline-primary"
                                 onClick={() => setOpen(true)}
                             >
-                                Ver
+                                Ingredientes
                             </button>
                         </div>
 
@@ -38,7 +38,7 @@ function Costillas() {
                 <div className="custom-overlay">
                     <div className="custom-window">
                         <h5>Ingredientes - Costilla BBQ</h5>
-                        <ul class="custom-list">
+                        <ul className="custom-list">
                         <li>2 racks de costilla de cerdo Yare's</li>
                         <li>Sal y pimienta al gusto</li>
                         <li>Rub seco: 2 cda azúcar morena, 1 cda paprika, 1 cdta ajo en polvo, 1 cdta cebolla en polvo, 1/2 cdta comino, 1/2 cdta chile en polvo</li>

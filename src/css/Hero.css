@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+#container3D{
+  position: fixed;
+  inset: 0;
+  /*background: rgb(255, 0, 0);*/
+  z-index: 100;
+  pointer-events: none;
+}
 
 .hero-img {
   position: absolute; inset: 0;
@@ -133,9 +140,13 @@
     background-color: #DBD7D7;
     width: 100%;
     min-height: 100vh;
+    padding: 4rem;
+    position: relative;
 }
 
-.title-asada{
+
+
+  .title-asada{
     background-color: #DBD7D7;
 }
 .title-asada h2 {
@@ -156,6 +167,8 @@ font-weight: 600;
 .album{
     border-radius: 10%;
 }
+
+
 
 
 

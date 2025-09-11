@@ -6,12 +6,10 @@ import Hero from "./components/Hero";        // 👈 importa Hero
 import Productos from "./components/Productos";
 import About from "./components/About";
 
+
 function App() {
   return (
     <Router>
-
-     
-
 
       <Routes>
         <Route path="/" element={<Hero />} />

@@ -53,7 +53,7 @@ export default function Header() {
           </div>
 
 
-          <div className="title">
+          <div className="title d-flex">
             <motion.h1
               variants={titleContainer}
               initial="hidden"

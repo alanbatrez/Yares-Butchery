@@ -26,7 +26,7 @@ function TuetanoCard() {
                                 className="btn btn-sm btn-outline-primary"
                                 onClick={() => setOpen(true)}
                             >
-                                Ver
+                                Ingredientes
                             </button>
                         </div>
 

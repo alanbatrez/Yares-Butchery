@@ -1,0 +1,25 @@
+.map-wrapper {
+    background-color: #406746;
+}
+
+.sub-title {
+    font-size: 3rem;
+    color: #FFFFFF;
+}
+
+.tienda-img {
+    padding-top: 4rem;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.info-text {
+    color: white;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+

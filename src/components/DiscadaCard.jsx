@@ -25,7 +25,7 @@ function DiscadaCard() {
                                 className="btn btn-sm btn-outline-primary"
                                 onClick={() => setOpen(true)}
                             >
-                                Ver
+                                Ingredientes
                             </button>
                         </div>
 
@@ -38,7 +38,7 @@ function DiscadaCard() {
                 <div className="custom-overlay">
                     <div className="custom-window">
                         <h5>Ingredientes – Discada Yare's</h5>
-                        <ul class="custom-list">
+                        <ul className="custom-list">
                             <li>500 g bistec de res Yare's en cubos</li>
                             <li>500 g lomo de cerdo Yare's en cubos</li>
                             <li>250 g tocino Yare's en tiras</li>
