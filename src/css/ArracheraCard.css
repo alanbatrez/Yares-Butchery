@@ -3,6 +3,16 @@
 html{
   scroll-behavior: smooth;
 }
+.ratio > img { width: 100%; height: 100%; }
+.of-cover { object-fit: cover; }
+
+/* Neutraliza estilos viejos que rompan el responsive */
+.gallery {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
 
 .custom-overlay {
   position: fixed;

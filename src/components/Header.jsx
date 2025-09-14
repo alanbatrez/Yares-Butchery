@@ -1,13 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
 import { motion } from "motion/react";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => setOpen(o => !o);
   const closeMenu = () => setOpen(false);
+  const location = useLocation();
 
+  // Cierra al navegar (incluye cambios de hash)
+  useEffect(() => { setOpen(false); }, [location.pathname, location.hash]);
+
+  // Cierra con ESC
+  useEffect(() => {
+    const onKey = e => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  // Lock scroll al abrir drawer
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+  }, [open]);
 
   const titleContainer = {
     hidden: { opacity: 0 },
@@ -70,8 +86,8 @@ export default function Header() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/productos">Productos</Link></li>
               <li><Link to="/about">About Us</Link></li>
-              <li><a href="#carnitaAsada">Carnita Asada</a></li>
-              <li><a href="#contacto">Contacto</a></li>
+              <li><Link to="/#carnitaAsada">Carnita Asada</Link></li>
+              <li><Link to="/#contact" > Contacto</Link></li>
             </ul>
           </div>
 

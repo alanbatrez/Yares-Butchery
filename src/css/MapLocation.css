@@ -1,9 +1,9 @@
 .map-wrapper {
-    background-color: #406746;
+    background-color: #dbd7d7;
 }
 
 .sub-title {
-    font-size: 3rem;
+    font-size: 3rem;<p class="info-text lead text-body-secondary" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Aquí encontrarás algunas buenas recetas para tu carnita asada</p>
     color: #FFFFFF;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .info-text {
-    color: white;
+    color: black;
     font-weight: 300;
     font-size: 3rem;
 }

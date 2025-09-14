@@ -1,14 +1,21 @@
+/* ========== HERO ===================================== */
 .hero {
   position: relative;
   width: 100%;
-  height: clamp(60vh, 80vh, 100vh);
+  /* Usa dvh/svh modernos + clamp estable */
+  height: clamp(60svh, 80svh, 100svh);
   overflow: hidden;
+}
+
+/* Si tienes navbar alto en desktop, compénsalo suavemente */
+@media (min-width: 1025px) {
+  :root { --navbar-h-lg: 64px; }
+  .hero { height: calc(100svh - var(--navbar-h-lg)); }
 }
 
 #container3D{
   position: fixed;
   inset: 0;
-  /*background: rgb(255, 0, 0);*/
   z-index: 100;
   pointer-events: none;
 }
@@ -17,33 +24,28 @@
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  will-change: transform;
   transform: scale(1);
   animation: heroZoom 14s ease-in-out forwards;
-  will-change: transform;
   z-index: -1;
   overflow: hidden;
 }
-
 
 @keyframes heroZoom {
   from { transform: scale(1); }
   to   { transform: scale(1.1); }
 }
 
-
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,.25) 0%,
-    rgba(0,0,0,.15) 40%,
-    rgba(0,0,0,.35) 100%
+          to bottom,
+          rgba(0,0,0,.25) 0%,
+          rgba(0,0,0,.15) 40%,
+          rgba(0,0,0,.35) 100%
   );
   pointer-events: none;
   z-index: 0;
 }
-
 
 .hero-content {
   position: relative; z-index: 1;
@@ -52,9 +54,9 @@
   padding: 1.5rem; text-align: center; color: #fff;
 }
 
-.test { 
-  text-align: center; 
-  color: #fff; 
+.test {
+  text-align: center;
+  color: #fff;
   text-shadow: 2px 2px 4px rgba(0,0,0,.7);
 }
 
@@ -65,8 +67,6 @@
   margin-bottom: 1rem;
 }
 
-#texto { font-size: 1.5rem; }
-
 .butn{
   margin-top: 1rem; padding: .7rem 1.2rem; border: 0; border-radius: .75rem;
   background: var(--green); color: #fff; font-weight: 700; cursor: pointer;
@@ -74,6 +74,7 @@
 }
 .butn:hover { transform: translateY(-1px) scale(1.02); filter: brightness(1.05); }
 
+/* SVG wave */
 .shapedividers_com-6484 {
   position: relative; width: 100%; line-height: 0; overflow: hidden;
 }
@@ -90,87 +91,54 @@
 }
 
 
-@media (max-width: 767px) {
-  .hero { height: 70vh; }
-  .hero-img { animation-duration: 10s; }
-
-  .shapedividers_com-6484::before {
-    height: clamp(24px, 6vw, 50px);
-    bottom: 0; left: 0; right: 0;
-    background-size: 100% 100%;
-    background-position: center bottom;
-  }
-
-  .butn {
-    padding: .9rem 1.2rem;
-    font-size: 1rem;
-    border-radius: .85rem;
-  
-  }
-
-    .wallpaper{
-      border-radius: 0% !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .hero { height: 80vh; }
-}
-
-
-@media (min-width: 1025px) {
-  .hero { height: calc(100vh - var(--navbar-h-lg)); }
-}
-
-
-@media (min-width: 2600px) {
-  .shapedividers_com-6484::before { height: calc(2vw + 34px); }
-}
-
-
 @media (prefers-reduced-motion: reduce) {
   .hero-img { animation: none; }
 }
 
-.bd-placeholder-img{
-        text-anchor: middle;
+/* Mobile tweaks: NO re-definir altura del hero (clamp ya lo hace bien) */
+@media (max-width: 767px) {
+  .butn { padding: .9rem 1.2rem; font-size: 1rem; border-radius: .85rem; }
 }
 
+/* ========== SECCIÓN CARNITA ASADA ==================== */
 .carnitaAsada{
-    background-color: #DBD7D7;
-    width: 100%;
-    min-height: 100vh;
-    padding: 4rem;
-    position: relative;
+  background-color: #406746;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: clamp(1rem, 2.5vw + 1rem, 4rem);
+  position: relative;
 }
 
 
-
-  .title-asada{
-    background-color: #DBD7D7;
-}
+.title-asada { background-color: #406746; color: #fff; }
 .title-asada h2 {
-display: inline-block;
-position: relative;
-font-size: 2.5rem;
-font-weight: 600;
+  display: inline-block;
+  position: relative;
+  font-size: clamp(1.75rem, 2.2vw + 1rem, 2.5rem);
+  font-weight: 600;
 }
+.sub-tex, #sub-texx { color: #fff; }
+
+
+.album{
+  border-radius: 12px;
+  overflow: hidden;
+
+}
+.album > .container { padding-left: 1rem; padding-right: 1rem; }
 
 
 .wallpaper{
-    background-color: #406746;
-    border-radius: 3%;
+  background-color: #1a3923;
+  border-radius: 12px;
+  overflow: hidden;
 }
-.under-wallpaper{
-    border-radius: 10%;
-}
-.album{
-    border-radius: 10%;
-}
+.under-wallpaper{ border-radius: 12px; }
+
+.bd-placeholder-img{ text-anchor: middle; }
 
 
-
-
-
+img { max-width: 100%; height: auto; display: block; }
 
 
