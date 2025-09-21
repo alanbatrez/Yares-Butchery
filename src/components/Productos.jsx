@@ -9,6 +9,7 @@ function Productos() {
     return(
         <section className="productos">
             <Header/>
+
         
         </section>
     );

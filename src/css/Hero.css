@@ -60,11 +60,23 @@
   text-shadow: 2px 2px 4px rgba(0,0,0,.7);
 }
 
+.bg-body-tertiary {
+  --bs-tertiary-bg-rgb: 36, 54, 38sub;
+}
+
+
 .welcome {
   color: #fff;
   font-size: clamp(2rem, 4vw, 4rem);
   text-shadow: 2px 2px 4px rgba(0,0,0,.7);
   margin-bottom: 1rem;
+}
+.card-body{
+  background-color: #243626 !important;
+}
+
+.card-text{
+  color: #fff !important;
 }
 
 .butn{
@@ -118,7 +130,7 @@
   font-size: clamp(1.75rem, 2.2vw + 1rem, 2.5rem);
   font-weight: 600;
 }
-.sub-tex, #sub-texx { color: #fff; }
+#sub-text { color: #fff; }
 
 
 .album{
