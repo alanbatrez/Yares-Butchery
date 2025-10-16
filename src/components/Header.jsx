@@ -38,7 +38,7 @@ export default function Header() {
     show: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", damping: 8, stiffness: 60 },
+      transition: { type: "spring", damping: 8, stiffness: 100 },
     },
   };
 
